@@ -1,0 +1,301 @@
+Z Clearance Setup,5,1
+Line Dispense Setup,0.2,0,0,0,0.1,0.1
+Backtrack Setup,20,20,100,4
+Line Speed,20
+
+// Initialize tag_pos
+Set tag_pos 0
+Var tag_pos (Channel5*4 + Channel6*2 + Channel7*1)
+Call Subroutine tag_pos
+
+// Tag 1 ([1,1], 000)
+Label,0
+Fiducial Mark,157,57,30.989,11
+Fiducial Mark,207,57,30.989,12
+Var tag_x adjusted_x
+Var tag_y adjusted_y
+Var tag_z adjusted_z
+Call Subroutine 100
+Call Return
+
+// Tag 2 ([2,1], 001)
+Label,1
+Fiducial Mark,157,137,30.989,13
+Fiducial Mark,207,137,30.989,14
+Var tag_x adjusted_x
+Var tag_y adjusted_y
+Var tag_z adjusted_z
+Call Subroutine 100
+Call Return
+
+// Tag 3 ([3,1], 010)
+Label,2
+Fiducial Mark,157,217,30.989,15
+Fiducial Mark,207,217,30.989,16
+Var tag_x adjusted_x
+Var tag_y adjusted_y
+Var tag_z adjusted_z
+Call Subroutine 100
+Call Return
+
+// Tag 4 ([4,1], 011)
+Label,3
+Fiducial Mark,157,297,30.989,17
+Fiducial Mark,207,297,30.989,18
+Var tag_x adjusted_x
+Var tag_y adjusted_y
+Var tag_z adjusted_z
+Call Subroutine 100
+Call Return
+
+// Tag 5 ([1,2], 100)
+Label,4
+Fiducial Mark,277,57,30.989,19
+Fiducial Mark,327,57,30.989,20
+Var tag_x adjusted_x
+Var tag_y adjusted_y
+Var tag_z adjusted_z
+Call Subroutine 100
+Call Return
+
+// Tag 6 ([2,2], 101)
+Label,5
+Fiducial Mark,277,137,30.989,21
+Fiducial Mark,327,137,30.989,22
+Var tag_x adjusted_x
+Var tag_y adjusted_y
+Var tag_z adjusted_z
+Call Subroutine 100
+Call Return
+
+// Tag 7 ([3,2], 110)
+Label,6
+Fiducial Mark,277,217,30.989,23
+Fiducial Mark,327,217,30.989,24
+Var tag_x adjusted_x
+Var tag_y adjusted_y
+Var tag_z adjusted_z
+Call Subroutine 100
+Call Return
+
+// Tag 8 ([4,2], 111)
+Label,7
+Fiducial Mark,277,297,30.989,25
+Fiducial Mark,327,297,30.989,26
+Var tag_x adjusted_x
+Var tag_y adjusted_y
+Var tag_z adjusted_z
+Call Subroutine 100
+Call Return
+
+// Bit Check Subroutine
+Label,100
+Set bit_num 0
+Var bit_num (Channel1*8 + Channel2*4 + Channel3*2 + Channel4*1)
+Call Subroutine bit_num
+Call Return
+
+// Bit 0: Tag Complete
+Label,0
+End Program
+
+// Bit 1
+Label,1
+Line Speed,5
+Line Start,(tag_x+1),(tag_y+1),tag_z
+Arc Point,(tag_x+2),(tag_y+1),tag_z
+Arc Point,(tag_x+1),(tag_y+2),tag_z
+Arc Point,(tag_x),(tag_y+1),tag_z
+Line End.
+Point,11.2,77.5,23
+Output,2,1
+Wait Point,5
+Output,2,0
+Output,1,1
+Wait Point,1
+Output,1,0
+Call Subroutine 100
+Call Return
+
+// Bit 2
+Label,2
+Line Speed,3.2
+Line Start,(tag_x+2),(tag_y+1),tag_z
+Arc Point,(tag_x+3),(tag_y+1),tag_z
+Arc Point,(tag_x+2),(tag_y+2),tag_z
+Arc Point,(tag_x+1),(tag_y+1),tag_z
+Line End.
+Point,11.2,157.5,23
+Output,2,1
+Wait Point,5
+Output,2,0
+Output,1,1
+Wait Point,1
+Output,1,0
+Call Subroutine 100
+Call Return
+
+// Bit 3
+Label,3
+Line Speed,2.5
+Line Start,(tag_x+3),(tag_y+1),tag_z
+Arc Point,(tag_x+4),(tag_y+1),tag_z
+Arc Point,(tag_x+3),(tag_y+2),tag_z
+Arc Point,(tag_x+2),(tag_y+1),tag_z
+Line End.
+Point,11.2,237.5,23
+Output,2,1
+Wait Point,5
+Output,2,0
+Output,1,1
+Wait Point,1
+Output,1,0
+Call Subroutine 100
+Call Return
+
+// Bit 4
+Label,4
+Line Speed,1.8
+Line Start,(tag_x+4),(tag_y+1),tag_z
+Arc Point,(tag_x+5),(tag_y+1),tag_z
+Arc Point,(tag_x+4),(tag_y+2),tag_z
+Arc Point,(tag_x+3),(tag_y+1),tag_z
+Line End.
+Point,11.2,317.5,23
+Output,2,1
+Wait Point,5
+Output,2,0
+Output,1,1
+Wait Point,1
+Output,1,0
+Call Subroutine 100
+Call Return
+
+// Bit 5
+Label,5
+Line Speed,1.2
+Line Start,(tag_x+5),(tag_y+1),tag_z
+Arc Point,(tag_x+6),(tag_y+1),tag_z
+Arc Point,(tag_x+5),(tag_y+2),tag_z
+Arc Point,(tag_x+4),(tag_y+1),tag_z
+Line End.
+Point,131.2,77.5,23
+Output,2,1
+Wait Point,5
+Output,2,0
+Output,1,1
+Wait Point,1
+Output,1,0
+Call Subroutine 100
+Call Return
+
+// Bit 6
+Label,6
+Line Speed,1.8
+Line Start,(tag_x+6),(tag_y+1),tag_z
+Arc Point,(tag_x+7),(tag_y+1),tag_z
+Arc Point,(tag_x+6),(tag_y+2),tag_z
+Arc Point,(tag_x+5),(tag_y+1),tag_z
+Line End.
+Point,131.2,157.5,23
+Output,2,1
+Wait Point,5
+Output,2,0
+Output,1,1
+Wait Point,1
+Output,1,0
+Call Subroutine 100
+Call Return
+
+// Bit 7
+Label,7
+Line Speed,1.2
+Line Start,(tag_x+7),(tag_y+1),tag_z
+Arc Point,(tag_x+8),(tag_y+1),tag_z
+Arc Point,(tag_x+7),(tag_y+2),tag_z
+Arc Point,(tag_x+6),(tag_y+1),tag_z
+Line End.
+Point,131.2,237.5,23
+Output,2,1
+Wait Point,5
+Output,2,0
+Output,1,1
+Wait Point,1
+Output,1,0
+Call Subroutine 100
+Call Return
+
+// Bit 8
+Label,8
+Line Speed,1.5
+Line Start,(tag_x+8),(tag_y+1),tag_z
+Arc Point,(tag_x+9),(tag_y+1),tag_z
+Arc Point,(tag_x+8),(tag_y+2),tag_z
+Arc Point,(tag_x+7),(tag_y+1),tag_z
+Line End.
+Point,131.2,317.5,23
+Output,2,1
+Wait Point,5
+Output,2,0
+Output,1,1
+Wait Point,1
+Output,1,0
+Call Subroutine 100
+Call Return
+
+// Bit 9
+Label,9
+Line Speed,1.2
+Line Start,(tag_x+9),(tag_y+1),tag_z
+Arc Point,(tag_x+10),(tag_y+1),tag_z
+Arc Point,(tag_x+9),(tag_y+2),tag_z
+Arc Point,(tag_x+8),(tag_y+1),tag_z
+Line End.
+Point,131.2,77.5,23
+Output,2,1
+Wait Point,5
+Output,2,0
+Output,1,1
+Wait Point,1
+Output,1,0
+Call Subroutine 100
+Call Return
+
+// Bit 10
+Label,10
+Line Speed,0.9
+Line Start,(tag_x+10),(tag_y+1),tag_z
+Arc Point,(tag_x+11),(tag_y+1),tag_z
+Arc Point,(tag_x+10),(tag_y+2),tag_z
+Arc Point,(tag_x+9),(tag_y+1),tag_z
+Line End.
+Point,131.2,317.5,23
+Output,2,1
+Wait Point,5
+Output,2,0
+Output,1,1
+Wait Point,1
+Output,1,0
+Call Subroutine 100
+Call Return
+
+// Ignored Bits (11–15)
+Label,11
+Call Subroutine 100
+Call Return
+
+Label,12
+Call Subroutine 100
+Call Return
+
+Label,13
+Call Subroutine 100
+Call Return
+
+Label,14
+Call Subroutine 100
+Call Return
+
+Label,15
+Call Subroutine 100
+Call Return

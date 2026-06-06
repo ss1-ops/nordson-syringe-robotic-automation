@@ -1,0 +1,580 @@
+Z Clearance Setup,5,1
+Line dispense Setup,.1,0,0,0,1,0
+Backtrack Setup,20,20,100,4
+Line Speed,20
+
+Fiducial Mark,156.933,83.192,27.655,11
+Fiducial Mark,231.828,143.075,27.655,12
+Fiducial Mark Adjust
+
+
+Line Speed,10
+Multi Needle,1
+
+
+// Binary Input Signals
+
+// Position Bits
+// Bit 7
+Input,7,1,2009999
+Input,7,0,1009999
+
+// Bit 6
+Label,1999999
+Input,6,1,1209999
+Input,6,0,1109999
+Label,999999
+Input,6,1,209999
+Input,6,0,109999
+
+// Bit 5
+Label,1199999
+Input,5,1,1129999
+Input,5,0,1119999
+Label,1099999
+
+
+
+
+Input,4,1,11999
+Input,4,0,10999
+End Program
+
+
+Label,1999
+Input,3,1,11199
+Input,3,0,11099
+End Program
+
+
+Label,999
+Input,3,1,10199
+Input,3,0,10099
+End Program
+
+Label,1199
+Input,2,1,11119
+Input,2,0,11109
+End Program
+
+Label,1099
+Input,2,1,11019
+Input,2,0,11009
+End Program
+
+
+Label,199
+Input,2,1,10119
+Input,2,0,10109
+
+
+Label,99
+Input,2,1,10019
+Input,2,0,10009
+
+
+Label,1119
+Input,1,1,11111
+Input,1,0,11110
+End Program
+
+Label,1109
+Input,1,1,11101
+Input,1,0,11100
+
+
+Label,1019
+Input,1,1,11011
+Input,1,0,11010
+End Program
+
+Label,1009
+Input,1,1,11001
+Input,1,0,11000
+End Program
+
+Label,119
+Input,1,1,10111
+Input,1,0,10110
+End Program
+
+Label,109
+Input,1,1,10101
+Input,1,0,10100
+End Program
+
+Label,19
+Input,1,1,10011
+Input,1,0,10010
+End Program
+
+Label,9
+Input,1,1,10001
+Input,1,0,10000
+End Program
+
+// Position Logic
+
+// First Row
+
+// Position 0
+
+
+
+// Position 1
+
+// Position 2
+// Position 3
+
+// Second Row
+
+// Position 4
+// Position 5
+// Position 6
+// Position 7
+
+
+// Print Bits
+
+// Bit 1
+Label,1
+Line Speed,50
+Circle,103.694,85.779,38.766,8.93,0,360
+Circle,128.694,90.779,38.766,8.93,0,360
+Circle,153.694,85.779,38.766,8.93,0,360
+Circle,153.694,115.779,38.766,8.93,0,360
+Circle,128.694,115.779,38.766,8.93,0,360
+Circle,103.694,115.779,38.766,8.93,0,360
+//Call Pattern,-7.043,17.396,25.278,201
+//Multi Needle,2
+//Wait Point,.05
+//Call Pattern,-55.303,38.946,25.278,201
+Park Position
+End Program
+
+
+// Bit 2
+Label,10
+Line Speed,32
+Circle,103.694,85.729,38.726,10.06,0,360
+Circle,128.694,90.729,38.726,10.06,0,360
+Circle,153.694,85.729,38.726,10.06,0,360
+Circle,153.694,115.729,38.726,10.06,0,360
+Circle,128.694,115.729,38.726,10.06,0,360
+Circle,103.694,115.729,38.726,10.06,0,360
+//Call Pattern,-7.043,17.396,38.763,202
+//Multi Needle,2
+//Wait Point,0.5
+//Call Pattern,-55.303,38.946,38.763,202
+Park Position
+End Program
+
+
+// Bit 3
+Label,11
+Line Speed,25
+Circle,103.694,85.729,38.706,11.34,0,360
+Circle,128.694,90.729,38.706,11.34,0,360
+Circle,153.694,85.729,38.706,11.34,0,360
+Circle,153.694,115.729,38.706,11.34,0,360
+Circle,128.694,115.729,38.706,11.34,0,360
+Circle,103.694,115.729,38.706,11.34,0,360
+//Call Pattern,-7.043,17.396,38.763,203
+//Multi Needle,2
+//Wait Point,0.5
+//Call Pattern,-55.303,38.946,38.763,203
+Park Position
+End Program
+
+
+// Bit 4
+Label,100
+Line Speed,18
+Circle,128.694,90.729,38.686,12.79,0,360
+Circle,153.694,115.729,38.686,12.79,0,360
+Circle,103.694,115.729,38.686,12.79,0,360
+//Call Pattern,-7.043,17.396,38.763,204
+//Multi Needle,2
+//Wait Point,0.5
+//Call Pattern,-55.303,38.946,38.763,204
+Park Position
+End Program
+
+// Bit 5
+Label,101
+Line Speed,12
+Circle,128.694,90.729,38.666,14.42,0,360
+Circle,153.694,115.729,38.666,14.42,0,360
+Circle,103.694,115.729,38.666,14.42,0,360
+//Call Pattern,-7.043,17.396,38.763,205
+//Multi Needle,2
+//Wait Point,0.5
+//Call Pattern,-55.303,38.946,38.763,205
+Park Position
+End Program
+
+
+// Bit 6
+Label,110
+Line Speed,18
+Circle,128.694,90.729,38.686,16.24,0,360
+Circle,153.694,115.729,38.686,16.24,0,360
+Circle,103.694,115.729,38.686,16.24,0,360
+Park Position
+Wait Point,15
+Line Speed,20
+Circle,128.694,90.729,38.596,16.24,0,360
+Circle,153.694,115.729,38.596,16.24,0,360
+Circle,103.694,115.729,38.596,16.24,0,360
+//Call Pattern,-7.043,17.396,38.763,206
+//Multi Needle,2
+//Wait Point,0.5
+//Call Pattern,-55.303,38.946,38.763,206
+Park Position
+End Program
+
+
+// Bit 7
+Label,111
+Line Speed,12
+Circle,128.694,90.729,38.666,18.3,0,360
+Circle,153.694,115.729,38.666,18.3,0,360
+Circle,103.694,115.729,38.666,18.3,0,360
+Park Position
+Wait Point,15
+// Layer 2
+Line Speed,18
+Circle,128.694,90.729,38.596,18.3,0,360
+Circle,153.694,115.729,38.596,18.3,0,360
+Circle,103.694,115.729,38.596,18.3,0,360
+//Call Pattern,-7.043,17.396,38.763,207
+//Multi Needle,2
+//Wait Point,0.5
+//Call Pattern,-55.303,38.946,38.763,207
+Park Position
+End Program
+
+// Bit 8
+Label,1000
+Line Speed,15
+Circle,128.694,90.729,38.686,20.63,0,360
+Circle,153.694,115.729,38.686,20.63,0,360
+Circle,103.694,115.729,38.686,20.63,0,360
+Park Position
+Wait Point,15
+// Layer 2
+Line Speed,20
+Circle,128.694,90.729,38.586,20.63,0,360
+Circle,153.694,115.729,38.586,20.63,0,360
+Circle,103.694,115.729,38.586,20.63,0,360
+Park Position
+Wait Point,15
+// Layer 3
+Line Speed,23
+Circle,128.694,90.729,38.536,20.63,0,360
+Circle,153.694,115.729,38.536,20.63,0,360
+Circle,103.694,115.729,38.536,20.63,0,360
+//Call Pattern,-7.043,17.396,38.763,208
+//Multi Needle,2
+//Wait Point,0.5
+//Call Pattern,-55.303,38.946,38.763,208
+Park Position
+End Program
+
+
+// Bit 9
+Label,1001
+Line Speed,12
+Circle,128.694,90.729,38.686,23.25,0,360
+Circle,153.694,115.729,38.686,23.25,0,360
+Circle,103.694,115.729,38.686,23.25,0,360
+Park Position
+Wait Point,15
+// Layer 2
+Line Speed,15
+Circle,128.694,90.729,38.576,23.25,0,360
+Circle,153.694,115.729,38.576,23.25,0,360
+Circle,103.694,115.729,38.576,23.25,0,360
+Park Position
+Wait Point,15
+// Layer 3
+Line Speed,25
+Circle,128.694,90.729,38.516,23.25,0,360
+Circle,153.694,115.729,38.516,23.25,0,360
+Circle,103.694,115.729,38.516,23.25,0,360
+//Call Pattern,-7.043,17.396,38.763,209
+//Multi Needle,2
+//Wait Point,0.5
+//Call Pattern,-55.303,38.946,38.763,209
+Park Position
+End Program
+
+
+// Bit 10
+Label,1010
+Line Speed,9
+Circle,128.694,90.729,38.686,26.2,0,360
+Circle,153.694,115.729,38.686,26.2,0,360
+Circle,103.694,115.729,38.686,26.2,0,360
+Park Position
+Wait Point,15
+// Layer 2
+Line Speed,12
+Circle,128.694,90.729,38.566,26.2,0,360
+Circle,153.694,115.729,38.566,26.2,0,360
+Circle,103.694,115.729,38.566,26.2,0,360
+Park Position
+Wait Point,15
+// Layer 3
+Line Speed,17
+Circle,128.694,90.729,38.506,26.2,0,360
+Circle,153.694,115.729,38.506,26.2,0,360
+Circle,103.694,115.729,38.506,26.2,0,360
+//Call Pattern,-7.038,17.628,25.278,210
+//Multi Needle,2
+//Wait Point,0.5
+//Call Pattern,-55.298,39.178,26.758,210
+Park Position
+End Program
+
+
+
+
+
+
+// Bit Patterns
+
+// Bit 1 (10)
+//Label,201
+
+//Line Start,92.962,102.628,65.592
+//Line End,142.962,102.628,65.592
+
+//Line Start,92.962,117.628,65.592
+//Line End,142.962,117.628,65.592
+
+//Line Start,92.962,137.628,65.592
+//Line End,142.962,137.628,65.592
+
+//End Pattern
+
+
+// Bit 2 (9)
+//Label,202
+
+
+//End Pattern
+
+
+// Bit 3 (8)
+//Label,203
+
+
+//End Pattern
+
+
+// Bit 4 (7)
+//Label,204
+
+
+//End Pattern
+
+
+// Bit 5 (6)
+//Label,205
+
+
+//End Pattern
+
+
+// Bit 6 (5)
+//Label,206
+
+
+//End Pattern
+
+
+// Bit 7 (4)
+//Label,207
+
+
+//End Pattern
+
+
+// Bit 8 (3)
+//Label,208
+
+
+//End Pattern
+
+
+// Bit 9 (2)
+//Label,209
+
+
+//End Pattern
+
+
+// Bit 10 (1)
+//Label,210
+
+
+//End Pattern
+
+Park Position
+
+
+[option]
+LaserEnable=1
+isGray=0
+colorR=0
+hasDrop=0
+gap_spline=0
+DoffsetX=0
+DoffsetY=0
+isInch=0
+fastMatch=0
+alarmEnable=0
+alarmX=0
+alarmY=0
+smallZ=0
+alarmZ=0
+ringMark=0
+lightDefault=0
+lightOffset=0
+distantScaleX=0
+distantScaleY=0
+weightGlue=0
+weightAmount=0
+weightSecond=0
+weightVoltage=0
+weighAirBig=0
+colorG=0
+weightX=0
+weightY=0
+weightZ=0
+colorB=0
+matchPixel=1
+skip=0
+screenOffset=0
+evenOffset=0
+LightHighX=67.461
+LightHighY=126.751
+LightHighZ=24.06
+suckLocateX=0
+suckLocateY=0
+suckLocateZ=0
+LightDistance=0
+homeBeforeRun=0
+music=0
+detectLength=10
+thick=0
+baseSubtract=5.932
+pinTouch=0
+highSubtract=31.697
+LaserLocateX=45.583
+LaserLocateY=147.029
+LaserLocateZ=29.021
+absoluteZ=29.9920001602173
+tipOffsetX=0
+tipOffsetY=0
+tipOffsetZ=0
+gluePutTime=0
+CCDPixelScaleX=96.905
+CCDPixelScaleY=97.94432
+CCDPixelScaleX1=100
+CCDPixelScaleY1=100
+CCDFocusHeight=0
+XYMoveSpeed=100
+ZMoveSpeed=50
+UMoveSpeed=90
+tipHomeX=0
+tipHomeY=0
+tipHomeZ=0
+tipHomeU=0
+tipAdjustX=19.364
+tipAdjustY=163.449
+tipAdjustZ=24.378
+GlueInterval=10
+outGlueTime=1
+outGlueEnable=0
+HomePark=0
+MaximumAmount=0
+NowCountWarn=0
+GlueTimeWarn=0
+UVwait=0
+move_acc=200
+vector_acc=200
+LaserH=0
+LaserL=0
+LaserLimitEnable=0
+LaserProfileXStep=200
+LaserProfileYMax=5
+LaserProfileYMin=-5
+LaserProfileMax=0
+LaserProfileMin=0
+LaserProfileSkipErr=0
+LaserProfileMaxValue=5
+LaserProfileMinValue=-5
+LaserProfileAction=0
+QA_imagesize=0
+QA_light=0
+QA_shutter=0
+QA_whitebalance=0
+FixturePlane=63.470,93.452,-4.054~63.470,93.452,-4.0543~
+score=0
+lensX=69.279
+lensY=195.891
+lensZ=25.598
+glueScore=0
+findGlueTime=0
+tailGlueTime=0
+offsetMark=0
+circle1=0
+circle2=0
+hs_x=0
+hs_y=0
+hs_z=0
+hs_initialz=0
+tipX2=0
+tipY2=0
+tipZ2=0
+ccdX2=0
+ccdY2=0
+ccdZ2=0
+tipX=19.794
+tipY=188.099
+tipZ=31.697
+cameraX=-1.241
+cameraY=-38.84399
+cameraZ=0
+offsetGlueOut=0
+focus=27.655
+findDelay=0.2
+SearchRangeOrgX0=0
+SearchRangeOrgY0=0
+SearchRangeWidth0=640
+SearchRangeHeight0=480
+SearchRangeOrgX1=0
+SearchRangeOrgY1=0
+SearchRangeWidth1=0
+SearchRangeHeight1=0
+detail=0
+bright=0=0
+exposure=625=0
+gain=363=0
+pan=8=0
+shutter=814=0
+gamma=1024
+red=550
+blue=810
+lvMultiTip=1~12~19.794,188.099,31.697~69.279,195.891,25.598~0~0~0~0~0~0~0.000:0.000:0.000
+lvMultiTip=2~1~0,203.776,0~69.295,195.877,26.036~0~0~0~0~0~0~0.000:0.000:0.000
+LastestTipOffsetX=0
+LastestTipOffsetY=0
+LastestTipOffsetZ=0
+hs_in=8
+hs_out=5
+hs_limit=10
+hs_speed=0
+mminch=0
